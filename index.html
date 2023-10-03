@@ -3,314 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esportivavip.com</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Index</title>
     <style>
-        html {
-            box-sizing: border-box;
-            font-size: 12px;
+        .left-container {
+            width: 200px;
+            height: 100vh;
         }
-        *, *:before, *:after {
-            box-sizing: inherit;
+        .right-container {
+            width: 380px;
+            height: 100vh;
         }
-        body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-            font-weight: normal;
-        }
-        ol, ul {
-            list-style: none;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        #footer_desktop {
-            display: grid;
-            gap: 20px;
-            width: 100%;
-            height: 300px;
-            background: #000;
-        }
-        .footer_desktop_grid_4 {
-            grid-template-columns: 150px 150px 150px 150px 1fr;
-        }
-        .footer_desktop-col {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            padding: 20px 10px;
-            width: 100%;
+        .center-container {
             height: 100%;
-        }
-        .col-1 {
-            padding: 20px 10px;
-            margin-left: -35px;
-        }
-        .col-2 {
-            padding: 20px 10px;
-            margin-left: -75px;
-        }
-        .footer_desktop-col h1 {
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #fff;
-        }
-        .footer_desktop-col span {
-            display: flex;
-            flex-direction: column;
-            font-size: 1rem;
-            color: #fff;
-        }
-        .footer_desktop-col .text_highlight {
-            font-weight: bold;
-            color: #ff0000;
-        }
-        .footer_desktop-col a.footer_btn {
-            display: block;
-            margin-top: 10px;
-            width: 150px;
-            text-decoration: none;
-        }
-        .footer_desktop-col a.footer_btn .footer_btn_content {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 40px;
-            border-radius: 5px;
-            border: 2px solid #fff;
-        }
-        .footer_desktop-col a.footer_btn .footer_btn_content i {
+            overflow-x: hidden;
+            overflow-y: scroll;
+            width: 933.6px;
+            margin-left: 10px;
             margin-right: 10px;
-            font-size: 1.5rem;
-            color: #ff0000;
         }
-        .footer_desktop-col .grid_2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0px;
-            width: 100%;
+        .app-main {
+            width: auto;
+            height: 100vh;
+            display: inline;
         }
-        .footer_desktop-col .grid_2 .grid_2_item {
-            display: flex;
-            align-items: center;
-            width: 100%;
-        }
-        .footer_desktop-col .grid_2 .grid_2_item i {
-            margin-right: 10px;
-            color: #ff0000;
-            font-size: 1.5rem;
-        }
-        .footer_desktop-col .grid_2 .grid_2_item .img-18 {
-            margin-right: 8px;
-            margin-left: -5px;
-            color: #ff0000;
-            align-items: center;
-            display: flex;
-            height: 24px;
-            max-width: none;
-            width: 100px;
-            text-align: left;
-            line-height: normal;
-            font-weight: 700;
-            text-size-adjust: 100%;
-            overflow-y: clip;
-            overflow-x: clip;
-        }
-        .footer_desktop-col .grid_2 .grid_2_item a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .footer_pattern {
-            gap: 20px !important;
-        }
-        .footer_rs_1,
-        .footer_rs_2 {
-            padding: 10px;
-            height: 120px;
-        }
-        .footer_rs_3,
-        .footer_rs_4 {
-            padding: 10px;
-            height: 80px;
-        }
-        .footer_rs_1 {
-            border-right: 1px dashed;
-            border-bottom: 1px dashed;
-            border-color: #444;
-        }
-        .footer_rs_1 span {
-            font-size: 12px;
-        }
-        .footer_rs_2 {
-            border-bottom: 1px dashed;
-            border-color: #444;
-        }
-        .footer_rs_3 {
-            border-right: 1px dashed;
-            border-color: #444;
-        }
-        .footer_desktop_copyright {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 40px;
-            background-color: #ff0000;
-        }
-        .footer_desktop_copyright span {
-            color: #fff;
-        }
-        .grid_2_item a {
-            cursor: pointer;
-        }
-        @media screen and (max-width: 720px) {
-            #footer_desktop {
-                height: 100%;
-            }
-            .footer_desktop_grid_4 {
-                grid-template-columns: 1fr;
-            }
-            .footer_desktop-col {
-                align-items: center;
-                justify-content: center;
-            }
-            .footer_desktop-col .grid_2 {
-                display: flex;
-                gap: 20px;
-                width: 100%;
-            }
-            .footer_desktop-col .grid_2 .grid_2_item {
-                width: auto;
-            }
-            .footer_pattern {
-                display: flex;
-                gap: 20px;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-            }
-            .footer_rs_1,
-            .footer_rs_2,
-            .footer_rs_3,
-            .footer_rs_4 {
-                height: 95px;
-            }
-            .footer_pattern .grid_2_item {
-                align-items: center;
-                justify-content: center;
-                width: auto;
-            }
-            .footer_desktop-col .footer_rs {
-                display: block;
-            }
-            .footer_desktop-col .footer_rs .grid_2_item {
-                justify-content: center;
-                border: none;
-            }
-            .col-1,
-            .col-2 {
-                margin-left: inherit;
-            }
+        .bets-footer {
+            margin-top: auto;
         }
     </style>
-    <script type="text/javascript">
-        var url;
-        var answer = document.getElementById("rule");
-        function getRulesUrl() {
-            if (navigator.userAgent.match(/Android/i)
-            || navigator.userAgent.match(/webOS/i)
-            || navigator.userAgent.match(/iPhone/i)
-            || navigator.userAgent.match(/iPad/i)) {
-                url = "https://esportivavip.com/sports/mobile/rules";
-            } else {
-                url = "https://esportivavip.com/sports/desktop/rules";
-            }
-            const button = document.getElementById("rule");
-            button.setAttribute("href", url);
-        }
-
-        function sendMessageToMain() {
-            window.parent.postMessage({type: 'openChat'}, "*");
-        }
-
-        function getLicensing() {
-            window.parent.postMessage({type: 'licensing'}, "*");
-        }
-    </script>
 </head>
-<body>
-    <div id="footer_desktop" class="footer_desktop_grid_4">
-        <div class="footer_desktop-col">
-            <h1>Suporte</h1>
-            <span>Fale via chat ou por E-mail:</span>
-            <span class="text_highlight">suporte@esportivavip.com</span>
-            <br>
-            <a class="footer_btn" href="javascript:void(sendMessageToMain());">
-                <div class="footer_btn_content">
-                    <i class="fa-solid fa-comment"></i>
-                    <span>Chat Online</span>
-                </div>
-            </a>
-        </div>
-        <div class="footer_desktop-col ig">
-            <h1>Nosso Instagram</h1>
-            <span>Em nosso instagram teremos</span>
-            <span>novidades e atualizações do site.</span>
-            <br>
-            <span>Acesse aqui:</span>
-            <br>
-            <span>
-                <a class="footer_btn" href="https://www.instagram.com/esportivavip/" target="_blank">
-                    <div class="footer_btn_content">
-                        <i class="fa-brands fa-instagram"></i>
-                        <span>esportivavip</span>
-                    </div>
-                </a>
-            </span>
-        </div>
-        <div class="footer_desktop-col">
-            <h1>Forma de Pagamento</h1>
-            <img src="https://betesporte.com/assets/images/pix.png" width="100px" alt="Pix">
-        </div>
-        <div class="footer_desktop-col col-1">
-            <h1>Certificação</h1>
-            <a href="javascript:void(getLicensing());">
-                <img src="https://betesporte.com/assets/images/gamingCuracao.png" width="100px" alt="Certificação Gaming Curacao">
-            </a>
-        </div>
-        <div class="footer_desktop-col col-2">
-            <h1>Regulamento e Segurança</h1>
-            <div class="grid_2 footer_rs">
-                <div class="grid_2_item footer_rs_1">
-                    <img src="https://raw.githubusercontent.com/aev-ev/icones/main/18.svg" class="img-18" />
-                    <span>Prezamos pelo jogo responsável, portanto são permitidos apenas cadastros de pessoas com mais de 18 anos!</span>
-                </div>
-                <div class="grid_2_item footer_rs_2">
-                    <i class="fa-solid fa-lock"></i>
-                    <span>Seus dados protegidos com alta tecnologia.</span>
-                </div>
-                <div class="grid_2_item footer_rs_3">
-                    <i class="fa-regular fa-file-lines"></i>
-                    <a id="rule" onclick="getRulesUrl()" target="_blank">Clique aqui para nosso regulamento</a>
-                </div>
-                <div class="grid_2_item footer_rs_4">
-                    <i class="fa-regular fa-file-lines"></i>
-                    <a href="https://esportivavip.com/EmailTemplates/policies/Privacy%20policy%20V.1.pdf" target="_blank">Política de privacidade</a>
+<body style="background: #f5f5f5;">
+    <div class="container">
+        <div class="left-container"></div>
+
+        <div class="center-container">
+            <div class="app-main">
+                <div class="bets-footer">
+                    <iframe width="100%" height="340" scrolling="no" src="footer.html"></iframe>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="footer_desktop_copyright">
-        <span>2023 Esportivavip.com - Todos os direitos reservados</span>
+
+        <div class="right-container"></div>
     </div>
 </body>
 </html>
